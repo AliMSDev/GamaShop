@@ -13,7 +13,7 @@ const BlogItem = (props) => {
                 <p dangerouslySetInnerHTML={props.describe} />
             </div>
             <div className='col-xs-12 col-s-12 col-m-2'>
-                <Link href={props.link}><a>See more <i className="fa fa-arrow-right" aria-hidden="true"></i></a></Link>
+                <Link href='/blog/[id]' as={props.link}><a>See more <i className="fa fa-arrow-right" aria-hidden="true"></i></a></Link>
             </div>
             <span>N</span>
         </div>

@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
-import BlogItem from '../blogitem/blogItem'
+import BlogItem from '../blogitem/blogItem';
 
 // This is BlogItem Component
 const BlogItems = () => {
@@ -17,4 +17,4 @@ const BlogItems = () => {
     )
 }
 
-export default BlogItems
+export default BlogItems;
