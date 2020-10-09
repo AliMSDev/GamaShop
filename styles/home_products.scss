@@ -1,0 +1,9 @@
+.home_products{
+    > div:last-child
+    {
+        margin-top: 30px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,43 @@
+// Grid
+@mixin grid($gridname, $maxmin, $gridnumber) {
+    @media only screen and (#{$maxmin}-width: #{$gridnumber}px) {
+        @for $i from 1 to 13 {
+            .col-#{$gridname}-#{$i} {
+                width: percentage($i/12);
+                flex-basis: percentage($i/12);
+                display: flex;
+                flex-wrap: wrap;
+            }
+        }
+    }
+}
+
+@include grid(xs, max, 576);
+@include grid(s, min, 576);
+@include grid(m, min, 768);
+@include grid(l, min, 992);
+@include grid(xl, min, 1200);
+
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@mixin container($maxmin, $gridnumber, $gridwidth) {
+    @media only screen and (#{$maxmin}-width: #{$gridnumber}px) {
+        .container {
+            width: #{$gridwidth}px;
+        }
+    }
+}
+
+@include container(min, 576, 540);
+@include container(min, 768, 720);
+@include container(min, 992, 960);
+@include container(min, 1200, 1140);
+
+// End Grid

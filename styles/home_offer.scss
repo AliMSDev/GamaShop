@@ -1,0 +1,33 @@
+.home_offer {
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(var(--gradLightBlue), var(--gradDarkBlue)), url("../public/Images/pattern.png");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    background-attachment: fixed;
+    padding: 15px;
+    > span,
+    > p {
+        color: var(--white);
+        text-align: center;
+    }
+    > span {
+        font-size: 30px;
+    }
+    > p {
+        margin: 15px 0;
+    }
+    > a {
+        padding: 15px 30px;
+        border-radius: 7px;
+        color: var(--white);
+        background: linear-gradient(var(--lightBlue), var(--darkBlue));
+        transition: 0.5s ease;
+        &:hover {
+            box-shadow: 0 10px 30px var(--shadow);
+            transform: translateY(-3%);
+        }
+    }
+}

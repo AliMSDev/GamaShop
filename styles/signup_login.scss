@@ -1,0 +1,91 @@
+.signup_login {
+    display: flex;
+    flex-flow: row wrap;
+    > div.signup_login_box {
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        width: 100%;
+        height: 400px;
+        background-image: linear-gradient(var(--gradLightBlue), var(--darkGray)),
+            url("../public/Images/signup_signin.jpg");
+        display: flex;
+        justify-content: space-evenly;
+        flex-flow: column wrap;
+        align-items: center;
+        background-position: center;
+        background-size: cover;
+        > p {
+            text-align: center;
+            font-size: 22px;
+            font-weight: 500;
+            color: var(--white);
+        }
+        > button {
+            padding: 15px 30px;
+            background: linear-gradient(var(--lightBlue), var(--darkBlue));
+            color: var(--white);
+            font-size: 15px;
+            border-radius: 7px;
+        }
+    }
+    > div.signup_login_form {
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        box-shadow: 0 10px 30px var(--shadow);
+        width: 100%;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        > form {
+            width: 100%;
+            display: flex;
+            flex-flow: column wrap;
+            align-items: center;
+            > h3 {
+                margin-bottom: 45px;
+                font-size: 25px;
+                letter-spacing: 3px;
+            }
+            > input,
+            > button {
+                margin: 15px 0;
+                font-size: 15px;
+            }
+            > input {
+                border: none;
+                padding: 7px;
+                border-bottom: 1px solid var(--lightGray);
+                width: 55%;
+                margin-bottom: 20px;
+            }
+            > button {
+                margin-top: 45px;
+                width: 25%;
+                height: 50px;
+                background: linear-gradient(var(--lightBlue), var(--darkBlue));
+                border-radius: 7px;
+                color: var(--white);
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .signup_login > div.signup_login_box
+    {
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 5px;
+    }
+    .signup_login > div.signup_login_form{
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 5px;
+    }
+}
+
+@media only screen and (max-width:400px)
+{
+    .signup_login > div.signup_login_form > form > input{
+        width: 75%;
+    }
+}

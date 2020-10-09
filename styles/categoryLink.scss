@@ -1,0 +1,43 @@
+.categoryLink {
+    height: fit-content;
+    > ul {
+        width: 100%;
+        > li:first-child {
+            background-color: var(--purple);
+            color: var(--white);
+            padding: 20px 30px;
+            border: none;
+        }
+        > li {
+            width: 100%;
+            padding: 15px 30px;
+            border-bottom: 1px solid var(--shadow);
+            border-right: 1px solid var(--shadow);
+            border-left: 1px solid var(--shadow);
+            > a {
+                color: var(--black);
+                &:hover {
+                    color: var(--lightBlue);
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .categoryLink {
+        margin-bottom: 90px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .categoryLink {
+        margin-bottom: 80px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .categoryLink {
+        margin-bottom: 70px;
+    }
+}

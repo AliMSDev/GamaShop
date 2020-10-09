@@ -1,0 +1,30 @@
+.brand
+{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    > figure 
+    {
+        padding: 30px;
+        opacity: 0.5;
+        transition: opacity 0.3s ease;
+        justify-content: center;
+        &:hover{
+            opacity: 1;
+        }
+        > img 
+        {
+            width: 100%;
+        }
+    }
+}
+@media only screen and (max-width:991px){
+    .brand > figure > img{
+        width: 80%;
+    }
+}
+@media only screen and (max-width:575px){
+    .brand > figure > img{
+        width: 60%;
+    }
+}

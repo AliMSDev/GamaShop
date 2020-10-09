@@ -1,0 +1,77 @@
+.contact{
+    display: flex;
+    flex-flow: column wrap;
+    > div:first-of-type{
+        width: 100%;
+        height: 300px;
+        > iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    }
+    > div:last-child{
+        margin-top: 50px;
+        display: flex;
+        flex-flow: row wrap;
+         > form {
+            display: flex;
+            flex-flow: column wrap;
+            width: 100%;
+            > input:first-child {
+                margin-top: 15px;
+            }
+            > input,
+            > textarea,
+            > button {
+                width: 100%;
+                border: 1px solid var(--shadow);
+                padding: 15px;
+                margin-bottom: 7px;
+            }
+            > input,
+            > textarea {
+                font-size: 14px;
+            }
+            > textarea {
+                resize: none;
+            }
+            > button {
+                background: linear-gradient(var(--lightBlue), var(--darkBlue));
+                color: var(--white);
+                font-size: 15px;
+            }
+        }
+        >figure 
+        {
+            width: 100%;
+            > img 
+            {
+                width: 100%;
+                height: 70%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+@media only screen and (max-width:1199px){
+    .contact > div:last-child > figure > img{
+        height: 95%;
+    }
+}
+
+@media only screen and (max-width:991px){
+    .contact > div:last-child > figure > img{
+        height: 114%;
+        object-fit: fill;
+    }
+}
+
+@media only screen and (max-width:767px){
+    .contact > div:last-child > form{
+        order: 2;
+    }
+    .contact > div:last-child > figure > img{
+        order: 1;
+    }
+}

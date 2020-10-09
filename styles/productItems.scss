@@ -1,0 +1,100 @@
+.productItems {
+    padding: 15px 40px;
+    transition: box-shadow 0.5s ease;
+    margin: 20px 0;
+    border: 1px solid var(--shadow);
+    > figure {
+        display: flex;
+        justify-content: center;
+        height: 200px;
+        overflow: hidden;
+        > img {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s ease;
+        }
+    }
+    > a {
+        margin: 15px 0;
+        color: var(--black);
+        text-align: justify;
+        font-weight: 200;
+    }
+    > div {
+        width: 50%;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        > button {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: var(--purple);
+            color: var(--white);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            > span {
+                position: absolute;
+                color: var(--darkBlue);
+                width: 75px;
+                left: 0;
+                visibility: hidden;
+                opacity: 0;
+                font-weight: 600;
+                transition: 0.2s ease;
+            }
+            &:hover {
+                background: linear-gradient(var(--lightBlue), var(--darkBlue));
+            }
+            &:hover > span {
+                visibility: visible;
+                opacity: 1;
+                left: 30px;
+            }
+        }
+    }
+    > span {
+        width: 50%;
+        text-align: right;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: flex-end;
+        font-weight: 200;
+    }
+    &:hover {
+        box-shadow: 0 10px 30px var(--shadow);
+    }
+    &:hover > figure > img {
+        transform: scale(1.2);
+    }
+}
+@media only screen and (max-width: 1199px) {
+    .productItems {
+        padding: 15px 30px;
+    }
+}
+@media only screen and(max-width:575px) {
+    .productItems {
+        margin: 20px 100px;
+        padding: 15px 50px;
+    }
+}
+@media only screen and(max-width:525px) {
+    .productItems {
+        margin: 20px 60px;
+    }
+}
+@media only screen and(max-width:440px) {
+    .productItems {
+        margin: 20px 40px;
+    }
+}
+@media only screen and(max-width:390px) {
+    .productItems {
+        margin: 20px;
+        padding: 15px 30px;
+    }
+}

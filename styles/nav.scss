@@ -1,0 +1,191 @@
+.navigation {
+    margin: auto;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    right: 0;
+    background-color: var(--white);
+    padding: 0;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    border-radius: 7px;
+    transition: 0.5s width ease;
+    box-shadow: 0 10px 30px var(--shadow);
+    z-index: 9999;
+    > ul {
+        display: flex;
+        flex-flow: row wrap;
+        > .navIcon,
+        .navItem,
+        .navLink {
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+        }
+        > .navIcon {
+            width: 20%;
+            padding-left: 20px;
+            > h1 {
+                margin-left: 15px;
+                letter-spacing: 3px;
+                font-weight: 500;
+            }
+            > i {
+                font-size: 40px;
+                color: var(--darkBlue);
+            }
+        }
+        > .navItem {
+            margin-left: 25%;
+            width: 40%;
+            > li {
+                margin: 0 12px;
+                > a {
+                    color: var(--black);
+                    padding: 35px 10px;
+                }
+            }
+            > li:nth-child(2) {
+                position: relative;
+                > ul {
+                    border-bottom-right-radius: 7px;
+                    border-bottom-left-radius: 7px;
+                    background-color: var(--white);
+                    position: absolute;
+                    top: 54px;
+                    left: 10px;
+                    padding: 5px 15px;
+                    width: 130px;
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: 0.5s all ease;
+                    box-shadow: 0 20px 30px var(--shadow);
+                    > li {
+                        margin: 14px 0;
+                        > a {
+                            color: var(--black);
+                        }
+                    }
+                }
+                &:hover > ul {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+        > .navLink {
+            width: 15%;
+            justify-content: center;
+            > li {
+                margin: 0 13px;
+                > a {
+                    color: var(--black);
+                }
+            }
+        }
+        > .navToggle {
+            width: 50%;
+            justify-content: flex-end;
+            align-items: center;
+            z-index: 99999;
+            display: none;
+            > button {
+                justify-content: center;
+                align-items: center;
+                flex-flow: column nowrap;
+                display: flex;
+                transition: 0.5s 0.5s ease;
+                span {
+                    width: 25px;
+                    transform-origin: right;
+                    height: 2px;
+                    margin: 7px 0;
+                    background-color: var(--black);
+                    transition: 0.5s ease;
+                }
+            }
+        }
+    }
+}
+
+.navigation a:hover {
+    font-weight: 500;
+}
+
+.navbarScroll {
+    width: 100%;
+    border-radius: 0;
+    position: fixed;
+    top: 0px;
+    left: 0;
+    right: 0;
+}
+
+.navToggleShow {
+    > button {
+        transform: rotateZ(90deg);
+        > span:first-of-type {
+            transform: rotateZ(-40deg);
+        }
+        > span:last-of-type {
+            transform: rotateZ(40deg);
+        }
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+    .navigationShow {
+        height: 375px !important;
+    }
+    .navigation {
+        width: 100%;
+        border-radius: 0;
+        height: 70px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        overflow-y: hidden;
+        display: block;
+        transition: height 0.5s 0.5s ease;
+        > ul {
+            > .navIcon {
+                width: 50%;
+                padding-left: 0;
+                margin-top: 15px;
+            }
+            > .navToggle {
+                display: flex;
+                margin-top: 15px;
+            }
+            > .navItem {
+                display: block;
+                margin-left: 0;
+                width: 100%;
+                > li {
+                    margin: 20px 0px;
+                    > a {
+                        padding: 10px;
+                    }
+                }
+                > li:last-of-type {
+                    margin-bottom: 7px;
+                }
+                > li:nth-child(2) {
+                    > ul {
+                        display: none;
+                    }
+                }
+            }
+            > .navLink {
+                margin: 0 12px;
+                display: block;
+                width: 100%;
+                > li {
+                    margin: 17px 0px;
+                }
+            }
+        }
+    }
+}

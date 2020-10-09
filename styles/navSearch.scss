@@ -1,0 +1,63 @@
+.navSearch {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: var(--darkGray);
+    z-index: 999999999;
+    position: fixed;
+    > div {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        > button {
+            width: 30px;
+            height: 30px;
+            font-size: 35px;
+            position: fixed;
+            z-index: 999999;
+            top: 25px;
+            right: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: column wrap;
+            &:hover > span {
+                width: 30px;
+            }
+            > span {
+                width: 25px;
+                height: 2px;
+                background-color: var(--white);
+                display: inline-block;
+            }
+            > span:first-child {
+                transform: rotateZ(-45deg);
+            }
+            > span:last-child {
+                transform: rotateZ(45deg);
+                position: relative;
+                top: -2px;
+            }
+        }
+        > input {
+            width: 70%;
+            padding: 15px;
+            border: 1px solid var(--white);
+            background-color: inherit;
+            color: var(--white);
+            font-size: 18px;
+        }
+        > a {
+            padding: 15px;
+            background-color: var(--white);
+            font-size: 20px;
+            color: var(--darkGray);
+        }
+    }
+}
+
+.navSearch-hide {
+    display: none;
+}
