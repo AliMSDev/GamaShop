@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import NavIcon from './navIcon/navIcon';
 import NavItem from './navItem/navItem';
-import NavLink from './navLink/navlink';
+import NavLink from './navLink/navLink';
 import NavToggle from './navToggle/navToggle';
 import { useSelector } from 'react-redux';
 import NavSearch from './navSearch/navSearch';
