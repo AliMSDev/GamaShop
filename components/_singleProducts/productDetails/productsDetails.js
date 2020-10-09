@@ -183,7 +183,7 @@ const ProductsDetails = (props) => {
                         <div>
                             <h3>{props.productDetails.title}</h3>
                             <h4>${props.productDetails.price}</h4>
-                            <h5>Category: <Link href={`/products/category/${props.productDetails.category}`}><a> {props.productDetails.category}</a></Link></h5>
+                            <h5>Category: <Link href='/products/category/[name]' as={`/products/category/${props.productDetails.category}`}><a> {props.productDetails.category}</a></Link></h5>
                             <h5>Availibility: In Stock</h5>
                         </div>
                         <span className='lineBreak'></span>

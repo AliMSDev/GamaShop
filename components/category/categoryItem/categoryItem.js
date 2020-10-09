@@ -5,7 +5,7 @@ import Link from 'next/link';
 const CategoryItem = (props) => {
     return (
         <li>
-            <Link href={props.link}>
+            <Link href='/products/category/[name]' as={props.link}>
                 <a>{props.text}</a>
             </Link>
         </li>
