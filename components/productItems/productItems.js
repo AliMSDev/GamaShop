@@ -8,7 +8,7 @@ const ProductItems = (props) => {
             <figure>
                 <img src={props.src} alt={props.alt} />
             </figure>
-            <Link href={props.link}>
+            <Link href="/products/[id]" as={props.link}>
                 <a>
                     {props.text}
                 </a>
