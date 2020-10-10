@@ -29,7 +29,7 @@ const PanelItem = () => {
     }
 
     // signout icon for Exit button
-    const signout = <><i class="fa fa-sign-out" aria-hidden="true"></i> Exit</>
+    const signout = <><i className="fa fa-sign-out" aria-hidden="true"></i> Exit</>
 
     // show menu or modal state
     const [show, setShow] = useState(
