@@ -78,9 +78,16 @@
 @media only screen and (max-width: 575px) {
     .panel {
         width: 80%;
+        > div:first-child{
+            order: 2;
+        }
         > div:last-child {
             padding: 30px 15px;
             padding-bottom: 80px;
+            order: 1;
+            margin-bottom: 20px;
+            border-top-right-radius: 5px;
+            border-top-left-radius: 5px;
         }
     }
 }
