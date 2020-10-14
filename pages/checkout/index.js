@@ -13,7 +13,7 @@ const CheckoutPage = () => {
     useEffect(() => {
         setTimeout(() => {
             setLoading(false)
-        }, 0);
+        }, 1000);
     }, []);
 
     if (loading) { return <Loading title='Checkout' /> }

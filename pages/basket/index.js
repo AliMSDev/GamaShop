@@ -12,7 +12,7 @@ const BasketPage = (props) => {
     useEffect(() => {
         setTimeout(() => {
             setLoading(false)
-        }, 0);
+        }, 1000);
     }, []);
 
     if (loading) { return <Loading title='Basket' /> }
