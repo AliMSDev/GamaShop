@@ -52,7 +52,7 @@ const Products = () => {
             }
             else {
                 // create modal is basketdata is empty
-                mapped = <Modal text='Your basket is empty.' link='/products' btntext='Go shopping' />
+                mapped = <Modal divclass='info' icon='fa fa-info' title='Information!' buttonclass='info' text='Your basket is empty.' link='/products' btntext='Go shopping' />
 
                 // set total price to zero
                 setTotalPrice('0');
@@ -101,7 +101,7 @@ const Products = () => {
             }
             else {
                 // create modal is basketdata is empty
-                mapped = <Modal text='Your basket is empty.' link='/products' btntext='Go shopping' />
+                mapped = <Modal divclass='info' icon='fa fa-info' title='Information!' buttonclass='info' text='Your basket is empty.' link='/products' btntext='Go shopping' />
 
                 // set mapped to showdata state
                 setShowData(mapped)
