@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import React, { useEffect, useState } from 'react'
 import Layout from '../../components/layout/layout';
 import Loading from '../../components/loading/loading';
@@ -21,15 +20,10 @@ const Signup = () => {
 
     else {
         return (
-            <>
-                <Head>
-                    <title>Sign up | Gama Store</title>
-                </Head>
-                <Layout>
-                    <PageHeader title='Sign up' />
-                    <SignupComponent />
-                </Layout>
-            </>
+            <Layout pageTitle='Sign up'>
+                <PageHeader title='Sign up' />
+                <SignupComponent />
+            </Layout>
         )
     }
 }

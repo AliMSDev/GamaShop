@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import Head from 'next/head';
 import Loading from '../../components/loading/loading';
 import Layout from '../../components/layout/layout';
 import PageHeader from '../../components/pageHeader/pageHeader';
@@ -20,16 +19,10 @@ const BasketPage = (props) => {
 
     else {
         return (
-            <>
-                <Head>
-                    <title>Basket | Gama Store</title>
-                    <link rel="icon" href="/favicon.ico" />
-                </Head>
-                <Layout>
-                    <PageHeader title='Basket' />
-                    <Products />
-                </Layout>
-            </>
+            <Layout pageTitle='Basket'>
+                <PageHeader title='Basket' />
+                <Products />
+            </Layout>
         )
     }
 }

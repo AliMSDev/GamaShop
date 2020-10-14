@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import axios from "axios";
-import Head from 'next/head';
 import Layout from '../components/layout/layout'
 import Header from '../components/_home/header/header'
 import Works from '../components/_home/works/works'
@@ -21,24 +20,18 @@ export default function Home({ data }) {
     }, 2000);
   }, []);
 
-  if (loading) { return <Loading title='Home'/> }
+  if (loading) { return <Loading title='Home' /> }
 
   else {
     return (
-      <>
-        <Head>
-          <title>Home | Gama Store</title>
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
-        <Layout>
-          <Header />
-          <Works />
-          <Gallery />
-          <Products data={data} />
-          <Offer />
-          <Brand />
-        </Layout>
-      </>
+      <Layout pageTitle='Home'>
+        <Header />
+        <Works />
+        <Gallery />
+        <Products data={data} />
+        <Offer />
+        <Brand />
+      </Layout>
     )
   }
 }

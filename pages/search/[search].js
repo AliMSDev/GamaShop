@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Loading from '../../components/loading/loading';
 import axios from 'axios';
-import Head from 'next/head';
 import Layout from '../../components/layout/layout';
 import PageHeader from '../../components/pageHeader/pageHeader';
 import Products from '../../components/_search/products/products';
@@ -11,7 +10,7 @@ import Category from '../../components/category/category';
 const Search = ({ searchData }) => {
     // set loading
     const [loading, setLoading] = useState(true);
- 
+
     useEffect(() => {
         setTimeout(() => {
             setLoading(false)
@@ -22,18 +21,13 @@ const Search = ({ searchData }) => {
 
     else {
         return (
-            <>
-                <Head>
-                    <title>Search | Gama Store</title>
-                </Head>
-                <Layout>
-                    <PageHeader title='Search' />
-                    <section className='categoryPage container section-gap'>
-                        <Category />
-                        <Products searchProp={searchData} />
-                    </section>
-                </Layout>
-            </>
+            <Layout pageTitle='Search'>
+                <PageHeader title='Search' />
+                <section className='categoryPage container section-gap'>
+                    <Category />
+                    <Products searchProp={searchData} />
+                </section>
+            </Layout>
         )
     }
 }

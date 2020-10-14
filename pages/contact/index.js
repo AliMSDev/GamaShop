@@ -21,15 +21,10 @@ const Contact = () => {
 
     else {
         return (
-            <>
-                <Head>
-                    <title>Contact | Gama Store</title>
-                </Head>
-                <Layout>
-                    <PageHeader title='Contact' />
-                    <ContactComponent/>
-                </Layout>
-            </>
+            <Layout pageTitle='Contact'>
+                <PageHeader title='Contact' />
+                <ContactComponent />
+            </Layout>
         )
     }
 }

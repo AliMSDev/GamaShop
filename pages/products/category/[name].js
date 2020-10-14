@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import Layout from '../../../components/layout/layout';
-import Head from 'next/head';
 import { useRouter } from 'next/router';
 import PageHeader from '../../../components/pageHeader/pageHeader';
 import Category from '../../../components/category/category';
@@ -27,18 +26,13 @@ const CategoryPage = ({ categoryData }) => {
 
     else {
         return (
-            <>
-                <Head>
-                    <title>{title} | Gama Store</title>
-                </Head>
-                <Layout>
-                    <PageHeader title={title} />
-                    <section className='categoryPage container section-gap'>
-                        <Category />
-                        <Products category={categoryData} title={title} />
-                    </section>
-                </Layout>
-            </>
+            <Layout pageTitle={title}>
+                <PageHeader title={title} />
+                <section className='categoryPage container section-gap'>
+                    <Category />
+                    <Products category={categoryData} title={title} />
+                </section>
+            </Layout>
         )
     }
 }

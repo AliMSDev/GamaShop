@@ -21,15 +21,10 @@ const About = () => {
 
     else {
         return (
-            <>
-                <Head>
-                    <title>About | Gama Store</title>
-                </Head>
-                <Layout>
-                    <PageHeader title='About' />
-                    <AboutComponent />
-                </Layout>
-            </>
+            <Layout pageTitle='About'>
+                <PageHeader title='About' />
+                <AboutComponent />
+            </Layout>
         )
     }
 }

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import Loading from '../../components/loading/loading';
-import Head from 'next/head';
 import Layout from '../../components/layout/layout';
 import PageHeader from '../../components/pageHeader/pageHeader';
 import axios from 'axios';
@@ -22,19 +21,13 @@ const SingleProduct = ({ singleProducts }) => {
 
     else {
         return (
-            <>
-                <Head>
-                    <title>Product Details | Gama Store</title>
-                    <link rel="icon" href="/favicon.ico" />
-                </Head>
-                <Layout>
-                    <PageHeader title='Product details' />
-                    <ProductsDetails productDetails={singleProducts} />
-                    <section className='container singleProducts_comments'>
-                        <Comments />
-                    </section>
-                </Layout>
-            </>
+            <Layout pageTitle='Product Details'>
+                <PageHeader title='Product details' />
+                <ProductsDetails productDetails={singleProducts} />
+                <section className='container singleProducts_comments'>
+                    <Comments />
+                </section>
+            </Layout>
         )
     }
 }

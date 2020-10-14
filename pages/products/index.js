@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import Layout from '../../components/layout/layout';
-import Head from 'next/head';
 import Category from '../../components/category/category';
 import Products from '../../components/_products/products/products';
 import PageHeader from '../../components/pageHeader/pageHeader';
@@ -22,19 +21,13 @@ const ProductsPage = ({ productsData }) => {
 
     else {
         return (
-            <>
-                <Head>
-                    <title>Products | Gama Store</title>
-                    <link rel="icon" href="/favicon.ico" />
-                </Head>
-                <Layout>
-                    <PageHeader title='Products' />
-                    <section className='products container section-gap'>
-                        <Category />
-                        <Products products={productsData} title='All products' />
-                    </section>
-                </Layout>
-            </>
+            <Layout pageTitle='Products'>
+                <PageHeader title='Products' />
+                <section className='products container section-gap'>
+                    <Category />
+                    <Products products={productsData} title='All products' />
+                </section>
+            </Layout>
         )
     }
 }

@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import React, { useEffect, useState } from 'react'
 import Layout from '../../components/layout/layout';
 import Loading from '../../components/loading/loading';
@@ -21,15 +20,10 @@ const Login = () => {
 
     else {
         return (
-            <>
-                <Head>
-                    <title>Login | Gama Store</title>
-                </Head>
-                <Layout>
-                    <PageHeader title='Login' />
-                    <LoginComponent />
-                </Layout>
-            </>
+            <Layout pageTitle='Login'>
+                <PageHeader title='Login' />
+                <LoginComponent />
+            </Layout>
         )
     }
 }

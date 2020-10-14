@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import React, { useEffect, useState } from 'react'
 import Layout from '../../components/layout/layout';
 import Loading from '../../components/loading/loading';
@@ -21,19 +20,13 @@ const CheckoutPage = () => {
 
     else {
         return (
-            <>
-                <Head>
-                    <title>Checkout | Gama Store</title>
-                    <link rel="icon" href="/favicon.ico" />
-                </Head>
-                <Layout>
-                    <PageHeader title='Checkout' />
-                    <section className='checkoutPage container section-gap'>
-                        <CheckoutForm />
-                        <CheckoutBasket />
-                    </section>
-                </Layout>
-            </>
+            <Layout pageTitle='Checkout'>
+                <PageHeader title='Checkout' />
+                <section className='checkoutPage container section-gap'>
+                    <CheckoutForm />
+                    <CheckoutBasket />
+                </section>
+            </Layout>
         )
     }
 }
