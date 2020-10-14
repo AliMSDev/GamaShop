@@ -13,7 +13,7 @@ const SingleBlog = () => {
     useEffect(() => {
         setTimeout(() => {
             setLoading(false)
-        }, 2000);
+        }, 0);
     }, []);
 
     if (loading) { return <Loading title='Blog Details' /> }

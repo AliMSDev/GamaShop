@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux';
 import Modal from '../modal/modal';
 import PanelInfo from './panelInfo/panelInfo'
@@ -7,11 +7,14 @@ import PanelItem from './panelItem/panelItem'
 // This is Panel Component
 const PanelComponent = () => {
 
-    // give isAuthenticate from Local Storage and give it authLocal
-    let authLocal = JSON.parse(localStorage.getItem('isAuthenticate'));
-
     // redux auth data state 
     let auth = useSelector(state => state.authenticationReduce);
+    const [authLocal, setAuthLocal] = useState(false);
+    
+    useEffect(() => {
+        // give isAuthenticate from Local Storage and give it authLocal
+        setAuthLocal(JSON.parse(localStorage.getItem('isAuthenticate')))
+    }, [])
 
     // give authLocal to auth variable
     auth = authLocal;

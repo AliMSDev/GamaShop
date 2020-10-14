@@ -14,7 +14,7 @@ const SingleProduct = ({ singleProducts }) => {
     useEffect(() => {
         setTimeout(() => {
             setLoading(false)
-        }, 2000);
+        }, 0);
     }, []);
 
     if (loading) { return <Loading title='Product Details' /> }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux';
 import Alert from '../../alert/alert';
 import Modal from '../../modal/modal';
@@ -44,8 +44,21 @@ const LoginComponent = () => {
     let users = useSelector(state => state.usersReduce);
     let auth = useSelector(state => state.authenticationReduce);
 
-    // give users from local storage and pass it in to the allusers variable
-    let allusers = JSON.parse(localStorage.getItem('users'));
+    // redux auth data state 
+    let authenticate = useSelector(state => state.authenticationReduce);
+
+    const [authLocal, setAuthLocal] = useState(false);
+    const [allusers, setAllusers] = useState([]);
+
+    useEffect(() => {
+        // give users from local storage and pass it in to the allusers variable
+        setAllusers(JSON.parse(localStorage.getItem('users')));
+
+        // give isAuthenticate from localStorage and give it to authLocal
+        setAuthLocal(JSON.parse(localStorage.getItem('isAuthenticate')))
+    }, [])
+    // give authLocal to authenticate
+    authenticate = authLocal;
 
     // give allusers to users
     users = allusers;
@@ -95,15 +108,6 @@ const LoginComponent = () => {
     const changePasswordHandler = (e) => {
         setPassword(e.target.value);
     }
-
-    // give isAuthenticate from localStorage and give it to authLocal
-    let authLocal = JSON.parse(localStorage.getItem('isAuthenticate'));
-
-    // redux auth data state 
-    let authenticate = useSelector(state => state.authenticationReduce);
-
-    // give authLocal to authenticate
-    authenticate = authLocal;
 
     // conditional rendering if authenticate is false
     if (authenticate === false) {

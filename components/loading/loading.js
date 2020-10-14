@@ -7,7 +7,6 @@ const Loading = (props) => {
         <>
             <Head>
                 <title>{`${props.title} | Gama Store`}</title>
-                <link rel="icon" href="/favicon.ico" />
             </Head>
             <section className='loading'>
                 <div></div>
