@@ -1,1 +1,1 @@
-This project created with React, Next, Redux, Sass.
+This project created with React, Next, Redux and Sass.
