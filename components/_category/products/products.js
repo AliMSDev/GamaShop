@@ -84,7 +84,7 @@ const Products = (props) => {
             <>
                 <section className='products_category_products col-xs-12 col-s-12 col-l-9'>
                     <ul>
-                        <li>{props.title}</li>
+                        <li>Category: {props.title}</li>
                     </ul>
                     <div>
                         {mapped}
