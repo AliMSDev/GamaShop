@@ -6,10 +6,10 @@ const CategoryItem = (props) => {
     return (
         <li>
             <Link href='/products/category/[name]' as={props.link}>
-                <a>{props.text}</a>
+                {props.text}
             </Link>
         </li>
-    )
+    );
 }
 
 export default CategoryItem

@@ -5,11 +5,14 @@ import Link from 'next/link';
 const CheckoutItem = (props) => {
     return (
         <div>
-            <Link href='/products/[id]' as={`/products/${props.link}`}><a className='col-xs-7 col-s-7'>{props.title}</a></Link>
+            <Link
+                href='/products/[id]'
+                as={`/products/${props.link}`}
+                className='col-xs-7 col-s-7'>{props.title}</Link>
             <span className='col-xs-2 col-s-2'>x{props.counter}</span>
             <span className='col-xs-3 col-s-3'>${props.price}</span>
         </div>
-    )
+    );
 }
 
 export default CheckoutItem

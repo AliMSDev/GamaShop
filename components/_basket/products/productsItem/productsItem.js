@@ -9,8 +9,8 @@ const ProductsItem = (props) => {
                 <figure>
                     <img src={props.src} alt={props.alt} />
                 </figure>
-                <Link href='/products/[id]' as={`/products/${props.link}`}><a>{props.title}</a></Link>
-            </div >
+                <Link href='/products/[id]' as={`/products/${props.link}`}>{props.title}</Link>
+            </div>
             <div className='col-xs-6 col-s-3 col-m-3 col-l-1'>
                 <span>${props.price}</span>
             </div>
@@ -29,7 +29,7 @@ const ProductsItem = (props) => {
                 </button>
             </div>
         </div >
-    )
+    );
 }
 
 export default ProductsItem

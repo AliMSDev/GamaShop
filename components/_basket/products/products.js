@@ -180,24 +180,22 @@ const Products = () => {
             }
         }
 
-        return (
-            <>
-                <section className='section-gap container basketPage_products'>
-                    {showData}
+        return <>
+            <section className='section-gap container basketPage_products'>
+                {showData}
+                <div>
                     <div>
-                        <div>
-                            <span>Total:</span>
-                            <span>${totalPrice}</span>
-                        </div>
-                        <div>
-                            <Link href='/products'><button>Continue shopping</button></Link>
-                            <Link href='/checkout'><button>Make order</button></Link>
-                        </div>
+                        <span>Total:</span>
+                        <span>${totalPrice}</span>
                     </div>
-                </section>
-                {alert}
-            </>
-        )
+                    <div>
+                        <Link href='/products' legacyBehavior><button>Continue shopping</button></Link>
+                        <Link href='/checkout' legacyBehavior><button>Make order</button></Link>
+                    </div>
+                </div>
+            </section>
+            {alert}
+        </>;
     }
     else {
         return (

@@ -12,11 +12,11 @@ const Modal = (props) => {
                 <div>
                     <h3>{props.title}</h3>
                     <p>{props.text}</p>
-                    <Link href={props.link}><button className={props.buttonclass}>{props.btntext}</button></Link>
+                    <Link href={props.link} legacyBehavior><button className={props.buttonclass}>{props.btntext}</button></Link>
                 </div>
             </div>
         </section>
-    )
+    );
 }
 
 export default Modal

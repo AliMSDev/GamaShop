@@ -9,8 +9,8 @@ const Category = () => {
                 <li>
                     Browse Categories
                 </li>
-                <CategoryItem link='/products/category/men clothing' text='Men clothing' />
-                <CategoryItem link='/products/category/women clothing' text='Women clothing' />
+                <CategoryItem link="/products/category/men's clothing" text="Men's clothing" />
+                <CategoryItem link="/products/category/women's clothing" text="Women's clothing" />
                 <CategoryItem link='/products/category/electronics' text='Electronics' />
                 <CategoryItem link='/products/category/jewelery' text='Jewelery' />
             </ul>

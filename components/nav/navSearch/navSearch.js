@@ -16,7 +16,7 @@ const NavSearch = (props) => {
             <div className='container'>
                 <button onClick={props.click}><span></span><span></span></button>
                 <input type='text' placeholder='Search' onChange={changeHandler} value={text} />
-                <Link href={`/search/${text}`}>
+                <Link legacyBehavior href={`/search/${text}`}>
                     <a><i className="fa fa-long-arrow-right" aria-hidden="true"></i></a>
                 </Link>
             </div>

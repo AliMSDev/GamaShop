@@ -15,10 +15,10 @@ const Form = (props) => {
                 <h3>{props.title}</h3>
                 <input type='text' placeholder='Username' onChange={props.changeUsername} value={props.usernameValue}/>
                 <input type='password' placeholder='Password' onChange={props.changePassword} value={props.passwordValue}/>
-                <Link href='/panel'><button onClick={props.click}>{props.btntext}</button></Link>
+                <Link href='/panel' legacyBehavior><button onClick={props.click}>{props.btntext}</button></Link>
             </form>
         </div>
-    )
+    );
 }
 
 export default Form

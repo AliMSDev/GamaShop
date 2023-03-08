@@ -7,7 +7,7 @@ const Offer = () => {
         <section className='home_offer'>
             <span>Exclusive Hot Deal Ends Soon!</span>
             <p>Who are in extremely love with eco friendly system.</p>
-            <Link href='/products'>
+            <Link legacyBehavior href='/products'>
                 <a>Shop Now</a>
             </Link>
         </section>

@@ -171,46 +171,44 @@ const ProductsDetails = (props) => {
                 setCurrentPrice(((singleProduct.price) * (counter - 1)).toFixed(2));
             }
         }
-        return (
-            <>
-                <section className='container singleProducts_productsDetails'>
-                    <div className='col-xs-12 col-s-12 col-l-6 singleProducts_productsDetails_image'>
-                        <figure>
-                            <img src={props.productDetails.image} alt={props.productDetails.title} />
-                        </figure>
+        return <>
+            <section className='container singleProducts_productsDetails'>
+                <div className='col-xs-12 col-s-12 col-l-6 singleProducts_productsDetails_image'>
+                    <figure>
+                        <img src={props.productDetails.image} alt={props.productDetails.title} />
+                    </figure>
+                </div>
+                <div className='col-xs-12 col-s-12 col-l-6 singleProducts_productsDetails_details'>
+                    <div>
+                        <h3>{props.productDetails.title}</h3>
+                        <h4>${props.productDetails.price}</h4>
+                        <h5>Category: <Link href='/products/category/[name]' as={`/products/category/${props.productDetails.category}`}> {props.productDetails.category}</Link></h5>
+                        <h5>Availibility: In Stock</h5>
                     </div>
-                    <div className='col-xs-12 col-s-12 col-l-6 singleProducts_productsDetails_details'>
+                    <span className='lineBreak'></span>
+                    <p>
+                        {props.productDetails.description}
+                    </p>
+                    <div>
                         <div>
-                            <h3>{props.productDetails.title}</h3>
-                            <h4>${props.productDetails.price}</h4>
-                            <h5>Category: <Link href='/products/category/[name]' as={`/products/category/${props.productDetails.category}`}><a> {props.productDetails.category}</a></Link></h5>
-                            <h5>Availibility: In Stock</h5>
-                        </div>
-                        <span className='lineBreak'></span>
-                        <p>
-                            {props.productDetails.description}
-                        </p>
-                        <div>
+                            <span>Quantity: </span><span>{counter}</span>
                             <div>
-                                <span>Quantity: </span><span>{counter}</span>
-                                <div>
-                                    <button onClick={addHandler} className={counter <= 0 ? removeBtnClass : null}>+</button>
-                                    <button onClick={removeHandler} className={counter <= 1 ? removeBtnClass : null}>-</button>
-                                </div>
-                            </div>
-                            <div>
-                                <span>${currentPrice}</span>
+                                <button onClick={addHandler} className={counter <= 0 ? removeBtnClass : null}>+</button>
+                                <button onClick={removeHandler} className={counter <= 1 ? removeBtnClass : null}>-</button>
                             </div>
                         </div>
                         <div>
-                            <button onClick={addremoveHandler}>{addremoveBtn}</button>
-                            <Link href='/basket'><button>See your basket</button></Link>
+                            <span>${currentPrice}</span>
                         </div>
                     </div>
-                </section>
-                {alert}
-            </>
-        )
+                    <div>
+                        <button onClick={addremoveHandler}>{addremoveBtn}</button>
+                        <Link href='/basket' legacyBehavior><button>See your basket</button></Link>
+                    </div>
+                </div>
+            </section>
+            {alert}
+        </>;
     }
 }
 export default ProductsDetails

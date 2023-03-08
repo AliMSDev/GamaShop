@@ -11,17 +11,17 @@ const NavItem = () => {
                 <ul>
                     <li>
                         <Link href='/products'>
-                            <a>Products</a>
+                            Products
                         </Link>
                     </li>
                     <li>
                         <Link href='/basket'>
-                            <a>Basket</a>
+                            Basket
                         </Link>
                     </li>
                     <li>
                         <Link href='/checkout'>
-                            <a>Checkout</a>
+                            Checkout
                         </Link>
                     </li>
                 </ul>
@@ -31,7 +31,7 @@ const NavItem = () => {
             <NavItems link='/contact' text='Contact' />
 
         </ul>
-    )
+    );
 }
 
 export default NavItem;

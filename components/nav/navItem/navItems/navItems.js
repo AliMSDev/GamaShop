@@ -9,7 +9,7 @@ const NavItems = (props) => {
     const dispatch = useDispatch();
     return (
         <li>
-            <Link href={props.link}>
+            <Link legacyBehavior href={props.link}>
                 <a onClick={() => dispatch(menuTogglefunc())}>{props.text}</a>
             </Link>
             {props.children}

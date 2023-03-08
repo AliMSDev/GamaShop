@@ -9,9 +9,9 @@ const ProductItems = (props) => {
                 <img src={props.src} alt={props.alt} />
             </figure>
             <Link href="/products/[id]" as={props.link}>
-                <a>
-                    {props.text}
-                </a>
+
+                {props.text}
+
             </Link>
             <div>
                 <button onClick={props.clickHandler}>
@@ -21,7 +21,7 @@ const ProductItems = (props) => {
             </div>
             <span>${props.price}</span>
         </div>
-    )
+    );
 }
 
 export default ProductItems

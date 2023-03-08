@@ -5,13 +5,13 @@ import Link from 'next/link';
 const NavLinks = (props) => {
     return (
         <li className='navLinks'>
-            <Link href={props.link}>
-                <a onClick={props.click}>
-                    <i className={props.icon} aria-hidden="true"></i>
-                </a>
+            <Link href={props.link} onClick={props.click}>
+
+                <i className={props.icon} aria-hidden="true"></i>
+
             </Link>
         </li>
-    )
+    );
 }
 
 export default NavLinks;

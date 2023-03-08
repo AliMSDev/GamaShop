@@ -5,9 +5,9 @@ import Link from 'next/link'
 const PanelItems = (props) => {
     return (
         <li>
-            <Link href={props.link}><a onClick={props.click}>{props.text}</a></Link>
+            <Link href={props.link} onClick={props.click}>{props.text}</Link>
         </li>
-    )
+    );
 }
 
 export default PanelItems
